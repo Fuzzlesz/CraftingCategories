@@ -1,6 +1,5 @@
 #include "Data/ConfigLoader.h"
 #include "Hooks/Crafting.h"
-#include "Translation/Translation.h"
 
 namespace
 {
@@ -33,20 +32,22 @@ namespace
 	}
 }
 
-extern "C" DLLEXPORT constinit auto SKSEPlugin_Version = []()
+extern "C" DLLEXPORT bool SKSEAPI
+SKSEPlugin_Query(const SKSE::QueryInterface* a_skse, SKSE::PluginInfo* a_info)
 {
-	SKSE::PluginVersionData v{};
+	a_info->infoVersion = SKSE::PluginInfo::kVersion;
+	a_info->name = Plugin::NAME.data();
+	a_info->version = Plugin::VERSION[0];
 
-	v.PluginVersion(Plugin::VERSION);
-	v.PluginName(Plugin::NAME);
-	v.AuthorName("Parapets"sv);
+	if (a_skse->IsEditor()) {
+		return false;
+	}
 
-	v.UsesAddressLibrary(true);
-	v.HasNoStructUse(true);
-	v.UsesStructsPost629(false);
 
-	return v;
-}();
+	return true;
+}
+
+
 
 extern "C" DLLEXPORT bool SKSEAPI SKSEPlugin_Load(const SKSE::LoadInterface* a_skse)
 {
@@ -63,7 +64,6 @@ extern "C" DLLEXPORT bool SKSEAPI SKSEPlugin_Load(const SKSE::LoadInterface* a_s
 		{
 			switch (msg->type) {
 			case SKSE::MessagingInterface::kDataLoaded:
-				Translation::ParseTranslation(Plugin::NAME.data());
 				Data::ConfigLoader::GetSingleton()->LoadConfigs();
 				break;
 			}

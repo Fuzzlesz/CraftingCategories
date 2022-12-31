@@ -1,3 +1,5 @@
+1.5.97 Port of Parapet's mod, full credit to them.
+
 Reworks SkyUI's Smithing and default crafting menu to add an extensible category
 system.
 
@@ -16,7 +18,7 @@ system.
 
 ## Building
 ```
-git clone https://github.com/Exit-9B/CraftingCategories
+git clone https://github.com/Fuzzlesz/CraftingCategories
 cd CraftingCategories
 git submodule init
 git submodule update

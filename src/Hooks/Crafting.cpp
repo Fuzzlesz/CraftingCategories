@@ -19,7 +19,7 @@ namespace Hooks
 
 		static const auto hook2 = REL::Relocation<std::uintptr_t>(
 			RE::Offset::CraftingMenu::Ctor,
-			0xA9);
+			0x5B);
 
 		if (!REL::make_pattern<"E8">().match(hook1.address()) ||
 			!REL::make_pattern<"E8">().match(hook2.address())) {
@@ -35,7 +35,7 @@ namespace Hooks
 	{
 		static const auto hook = REL::Relocation<std::uintptr_t>(
 			RE::Offset::CraftingSubMenus::ConstructibleObjectMenu::UpdateItemList,
-			0x2C8);
+			0x22D);
 
 		if (!REL::make_pattern<"E8">().match(hook.address())) {
 			util::report_and_fail("Failed to install Crafting::CustomCategoryPatch"sv);

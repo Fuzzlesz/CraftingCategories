@@ -3,10 +3,14 @@
   "name": "craftingcategories",
   "version": "1",
   "dependencies": [
+    "commonlibsse-po3-se",
     "boost-stl-interfaces",
     "rsm-binary-io",
     "spdlog",
     "jsoncpp",
+    "nlohmann-json",
+    "json-schema-validator",
+    "brotli",
     "tsl-ordered-map"
   ]
 }
