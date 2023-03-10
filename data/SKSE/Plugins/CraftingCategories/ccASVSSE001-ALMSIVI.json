@@ -1,9 +1,0 @@
-{
-  "$schema": "https://raw.githubusercontent.com/Exit-9B/CraftingCategories/main/docs/CraftingCategories.schema.json",
-  "categories": {
-    "$Ordinator": {
-      "section": "$WEAPONS & ARMOR",
-      "keywords": [ "ccASVSSE001_ArmorOrdinator", "ccASVSSE001_ArmorOrdinatorIndoril" ]
-    }
-  }
-}
