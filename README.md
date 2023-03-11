@@ -1,7 +1,7 @@
 Reworks SkyUI's Smithing and default crafting menu to add an extensible category
 system.
 
-Port of original mod by Parapets to 1.5.97
+Port of original mod by Parapets to Skyrim version 1.5.97.
 
 ## Requirements
 * [CMake](https://cmake.org/)
