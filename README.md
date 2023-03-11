@@ -1,6 +1,8 @@
 Reworks SkyUI's Smithing and default crafting menu to add an extensible category
 system.
 
+Port of original mod by Parapets to 1.5.97
+
 ## Requirements
 * [CMake](https://cmake.org/)
 	* Add this to your `PATH`
@@ -16,8 +18,8 @@ system.
 
 ## Building
 ```
-git clone https://github.com/Exit-9B/CraftingCategories
-cd CraftingCategories
+git clone https://github.com/Fuzzlesz/CraftingCategories-SE
+cd CraftingCategories-SE
 git submodule init
 git submodule update
 cmake --preset vs2022-windows
