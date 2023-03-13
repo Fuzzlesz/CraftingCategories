@@ -28,10 +28,7 @@ namespace util
 	}
 }
 
-
-#define IF_SKYRIMSE(a_resultSE) a_resultSE
-
-#define MAKE_OFFSET(a_idSE) (REL::ID(a_idSE))
+#define MAKE_OFFSET(a_idSE) REL::ID(a_idSE)
 
 #define DLLEXPORT __declspec(dllexport)
 
