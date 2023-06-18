@@ -18,7 +18,7 @@ Port of original mod by Parapets to Skyrim version 1.5.97.
 
 ## Building
 ```
-git clone https://github.com/Fuzzlesz/CraftingCategories-SE
+git clone https://github.com/Fuzzlesz/CraftingCategories-1.5
 cd CraftingCategories-SE
 git submodule init
 git submodule update
