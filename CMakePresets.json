@@ -58,7 +58,7 @@
       ],
       "name": "vs2022-windows",
       "toolset": "v143"
-    },
+    }
   ],
   "version": 3
 }
